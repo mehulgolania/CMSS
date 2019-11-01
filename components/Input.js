@@ -1,15 +1,17 @@
 import React from 'react';
 import { StyleSheet, TextInput } from 'react-native';
 
-const Input = props => {
-  return(
-    <TextInput 
-      style={{...styles.input, ...props.style}}
-      {...props}
-      
-      blurOnSubmit={true}
-    />  
-  );
+class Input extends React.Component{
+  render(){
+    return(
+      <TextInput 
+        style={{...styles.input, ...this.props.style}}
+        {...this.props}
+
+        blurOnSubmit={true}
+      />  
+    );
+  }
 }
 
 const styles = StyleSheet.create({
